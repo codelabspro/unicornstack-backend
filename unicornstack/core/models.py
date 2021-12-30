@@ -1,8 +1,6 @@
-# DefiStack
+from django.db import models
 
-django-admin startproject unicornstack
-
-~~~
+# Create your models here.
 class Asset(models.Model):
     asset_id=models.CharField(max_length=200)
     name=models.CharField(max_length=200)
@@ -18,9 +16,3 @@ class Asset(models.Model):
     class Meta:
         verbose_name_plural = "Assets"
         ordering = ["name", "created_at"]
-~~~
-
-python manage.py migrate
-
-python manage.py createsuperuser
-
